@@ -161,10 +161,12 @@ News
 - *[NeuCGC] is accepted in IEEE TKDE &#128293;*
 - *[CVNC] is accepted in ICME 2025 &#128293;*
 
-<h2>Selected Publications</h2>
-<p style="font-size: 15px; margin-top: -10px; margin-bottom: 20px; color: #444;">
-  (* equal contribution, &dagger; corresponding author)
-</p>
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+  <h2 style="margin: 0; display: inline;">Selected Publications</h2>
+  <span style="font-size: 15px; margin-left: 8px; color: #444;">
+    (* equal contribution, &dagger; corresponding author)
+  </span>
+</div>
 --------------
 <div class="publication-card">
     <img src="images/TCSVT25.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
