@@ -45,10 +45,10 @@ redirect_from:
         box-sizing: border-box;
     }
 
-    /* Publication card updated for fixed image layout */
+    /* Publication card: align image with fixed meta block */
     .publication-card {
         display: flex;
-        align-items: flex-start;
+        align-items: center; /* 关键：图片与 fixed-meta 垂直居中 */
         padding: 16px;
         border: 1.5px solid #ddd;
         border-radius: 8px;
@@ -70,6 +70,13 @@ redirect_from:
 
     .publication-card.featured:hover {
         box-shadow: 0 8px 16px rgba(242, 166, 120, 0.4); 
+    }
+
+    .publication-details {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 0;
     }
 
     .paper-links a {
@@ -146,19 +153,17 @@ redirect_from:
         border-radius: 6px;
         overflow: hidden;
         flex-shrink: 0;
-        position: relative;
-        /* 让内容靠下显示（下移图片） */
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        padding-bottom: 4px; /* 微调下移量，可按需调整 */
+        padding-bottom: 4px;
     }
-    
+
     .paper-image {
         width: 100%;
         height: 100%;
-        object-fit: contain; /* 关键：完整显示整图，不裁剪 */
-        object-position: center bottom; /* 可选：让图片靠下对齐 */
+        object-fit: contain; /* 完整显示，不裁剪 */
+        object-position: center bottom;
         transition: transform 0.2s;
     }
 
@@ -166,15 +171,15 @@ redirect_from:
         transform: scale(1.05);
     }
 
-    /* Lightbox overlay */
+    /* Lightbox overlay — transparent background */
     #lightbox-overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(250, 250, 250, 0.88); /* 浅灰白 + 高透明度 */
-        backdrop-filter: blur(4px); /* 可选：毛玻璃效果，更现代 */
+        background: rgba(250, 250, 250, 0.88);
+        backdrop-filter: blur(4px);
         display: none;
         justify-content: center;
         align-items: center;
@@ -186,7 +191,7 @@ redirect_from:
         max-height: 90%;
         border: 2px solid #e0e0e0;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-        border-radius: 8px; /* 可选圆角 */
+        border-radius: 8px;
     }
 </style>
 
@@ -235,29 +240,32 @@ Previously I worked at Shantou University with <a href="https://cliu272.github.i
 
 <h2>Selected Publication</h2>
 
+<!-- Paper 1 -->
 <div class="publication-card">
     <div class="image-wrapper" onclick="openLightbox('images/TCSVT25.png')">
         <img src="images/TCSVT25.png" alt="SMART" class="paper-image">
     </div>
     <div class="publication-details">
-        <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
-        SMART: Semantic Matching Contrastive Learning for Partially View-Aligned Clustering
-        </span><br>
-        <div class="author-links" style="font-size: 13px">
-            <a href="" target="_blank">Liang Peng</a>*, 
-            <a href="" target="_blank"><strong>Yixuan Ye</strong></a>*, 
-            <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
-            <a href="" target="_blank">Hangjun Che</a>,
-            <a href="" target="_blank">Fei Wang</a>,
-            <a href="" target="_blank">Zhiwen Yu</a>,<br>
-            <a href="" target="_blank">Hau-San Wong</a>
-        </div>
-        <div style="font-size: 13px;">IEEE Transactions on Circuits and Systems for Video Technology (<strong>IEEE TCSVT</strong>)</div>
-        <div class="paper-links" style="font-size:13px;">
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-4')">[Abstract]</a>
-            <a href="#">[Paper]</a>
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-4')">[BibTex]</a>
-            <a href="https://github.com/THPengL/SMART">[Code]</a>
+        <div class="fixed-meta">
+            <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
+            SMART: Semantic Matching Contrastive Learning for Partially View-Aligned Clustering
+            </span><br>
+            <div class="author-links" style="font-size: 13px">
+                <a href="" target="_blank">Liang Peng</a>*, 
+                <a href="" target="_blank"><strong>Yixuan Ye</strong></a>*, 
+                <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
+                <a href="" target="_blank">Hangjun Che</a>,
+                <a href="" target="_blank">Fei Wang</a>,
+                <a href="" target="_blank">Zhiwen Yu</a>,<br>
+                <a href="" target="_blank">Hau-San Wong</a>
+            </div>
+            <div style="font-size: 13px;">IEEE Transactions on Circuits and Systems for Video Technology (<strong>IEEE TCSVT</strong>)</div>
+            <div class="paper-links" style="font-size:13px;">
+                <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-4')">[Abstract]</a>
+                <a href="#">[Paper]</a>
+                <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-4')">[BibTex]</a>
+                <a href="https://github.com/THPengL/SMART">[Code]</a>
+            </div>
         </div>
         <div id="abstract-4" class="abstract-container">
             <div class="abstract-content">
@@ -276,29 +284,32 @@ Extensive experiments on eight benchmark datasets demonstrate that our method co
     </div>
 </div>
 
+<!-- Paper 2 -->
 <div class="publication-card">
     <div class="image-wrapper" onclick="openLightbox('images/AAAI26.png')">
         <img src="images/AAAI26.png" alt="scRCL" class="paper-image">
     </div>
     <div class="publication-details">
-        <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
-        Refinement Contrastive Learning of Cell-Gene Associations for Unsupervised Cell Type Identification
-        </span><br>
-        <div class="author-links" style="font-size: 13px">
-            <a href="" target="_blank">Liang Peng</a>*, 
-            <a href="" target="_blank">Haopeng Liu</a>*,
-            <a href="" target="_blank"><strong>Yixuan Ye</strong></a>*, 
-            <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
-            <a href="" target="_blank">Wenjun Shen</a>,
-            <a href="" target="_blank">Si Wu</a>,
-            <a href="" target="_blank">Hau-San Wong</a>
-        </div>
-        <div style="font-size: 13px;">The 40th Annual AAAI Conference on Artificial Intelligence (<strong>AAAI 2026</strong>)</div>
-        <div class="paper-links" style="font-size:13px;">
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-3')">[Abstract]</a>
-            <a href="#">[Paper]</a>
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-3')">[BibTex]</a>
-            <a href="https://github.com/THPengL/SMART">[Code]</a>
+        <div class="fixed-meta">
+            <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
+            Refinement Contrastive Learning of Cell-Gene Associations for Unsupervised Cell Type Identification
+            </span><br>
+            <div class="author-links" style="font-size: 13px">
+                <a href="" target="_blank">Liang Peng</a>*, 
+                <a href="" target="_blank">Haopeng Liu</a>*,
+                <a href="" target="_blank"><strong>Yixuan Ye</strong></a>*, 
+                <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
+                <a href="" target="_blank">Wenjun Shen</a>,
+                <a href="" target="_blank">Si Wu</a>,
+                <a href="" target="_blank">Hau-San Wong</a>
+            </div>
+            <div style="font-size: 13px;">The 40th Annual AAAI Conference on Artificial Intelligence (<strong>AAAI 2026</strong>)</div>
+            <div class="paper-links" style="font-size:13px;">
+                <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-3')">[Abstract]</a>
+                <a href="#">[Paper]</a>
+                <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-3')">[BibTex]</a>
+                <a href="https://github.com/THPengL/SMART">[Code]</a>
+            </div>
         </div>
         <div id="abstract-3" class="abstract-container">
             <div class="abstract-content">
@@ -316,29 +327,32 @@ Extensive experiments on several single‑cell RNA‑seq and spatial transcripto
     </div>
 </div>
 
+<!-- Paper 3 -->
 <div class="publication-card">
     <div class="image-wrapper" onclick="openLightbox('images/TKDE25.png')">
         <img src="images/TKDE25.png" alt="NeuCGC" class="paper-image">
     </div>
     <div class="publication-details">
-        <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
-        Trustworthy Neighborhoods Mining: Homophily-Aware Neutral Contrastive Learning for Graph Clustering
-        </span><br>
-        <div class="author-links" style="font-size: 13px">
-            <a href="" target="_blank">Liang Peng</a>, 
-            <a href="" target="_blank"><strong>Yixuan Ye</strong></a>, 
-            <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
-            <a href="" target="_blank">Hangjun Che</a>,
-            <a href="" target="_blank">Man-Fai Leung</a>,
-            <a href="" target="_blank">Si Wu</a>,
-            <a href="" target="_blank">Hau-San Wong</a>
-        </div>
-        <div style="font-size: 13px;">IEEE Transactions on Knowledge and Data Engineering (<strong>IEEE TKDE</strong>)</div>
-        <div class="paper-links" style="font-size:13px;">
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-2')">[Abstract]</a>
-            <a href="https://ieeexplore.ieee.org/abstract/document/11206540">[Paper]</a>
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-2')">[BibTex]</a>
-            <a href="https://github.com/THPengL/NeuCGC">[Code]</a>
+        <div class="fixed-meta">
+            <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
+            Trustworthy Neighborhoods Mining: Homophily-Aware Neutral Contrastive Learning for Graph Clustering
+            </span><br>
+            <div class="author-links" style="font-size: 13px">
+                <a href="" target="_blank">Liang Peng</a>, 
+                <a href="" target="_blank"><strong>Yixuan Ye</strong></a>, 
+                <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
+                <a href="" target="_blank">Hangjun Che</a>,
+                <a href="" target="_blank">Man-Fai Leung</a>,
+                <a href="" target="_blank">Si Wu</a>,
+                <a href="" target="_blank">Hau-San Wong</a>
+            </div>
+            <div style="font-size: 13px;">IEEE Transactions on Knowledge and Data Engineering (<strong>IEEE TKDE</strong>)</div>
+            <div class="paper-links" style="font-size:13px;">
+                <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-2')">[Abstract]</a>
+                <a href="https://ieeexplore.ieee.org/abstract/document/11206540">[Paper]</a>
+                <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-2')">[BibTex]</a>
+                <a href="https://github.com/THPengL/NeuCGC">[Code]</a>
+            </div>
         </div>
         <div id="abstract-2" class="abstract-container">
             <div class="abstract-content">
@@ -364,29 +378,32 @@ Experimental results demonstrate the effectiveness and robustness of our approac
     </div>
 </div>
 
+<!-- Paper 4 -->
 <div class="publication-card">
     <div class="image-wrapper" onclick="openLightbox('images/ICME2025.jpg')">
         <img src="images/ICME2025.jpg" alt="CVNC" class="paper-image">
     </div>
     <div class="publication-details">
-        <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
-        Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning
-        </span><br>
-        <div class="author-links" style="font-size: 13px">
-            <a href="" target="_blank"><strong>Yixuan Ye</strong></a>, 
-            <a href="" target="_blank">Yang Zhang</a>,
-            <a href="" target="_blank">Liang Peng</a>,
-            <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
-            <a href="" target="_blank">Rui Li</a>,
-            <a href="" target="_blank">Si Wu</a>,
-            <a href="" target="_blank">Hau-San Wong</a>
-        </div>
-        <div style="font-size: 13px;">The 26th IEEE International Conference on Multimedia and Expo (<strong>ICME 2025</strong>)</div>
-        <div class="paper-links" style="font-size:13px;">
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-1')">[Abstract]</a>
-            <a href="https://ieeexplore.ieee.org/document/11209498">[Paper]</a>
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-1')">[BibTex]</a>
-            <a href="https://github.com/EasonTuT/ICME2025-CVNC">[Code]</a>
+        <div class="fixed-meta">
+            <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
+            Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning
+            </span><br>
+            <div class="author-links" style="font-size: 13px">
+                <a href="" target="_blank"><strong>Yixuan Ye</strong></a>, 
+                <a href="" target="_blank">Yang Zhang</a>,
+                <a href="" target="_blank">Liang Peng</a>,
+                <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
+                <a href="" target="_blank">Rui Li</a>,
+                <a href="" target="_blank">Si Wu</a>,
+                <a href="" target="_blank">Hau-San Wong</a>
+            </div>
+            <div style="font-size: 13px;">The 26th IEEE International Conference on Multimedia and Expo (<strong>ICME 2025</strong>)</div>
+            <div class="paper-links" style="font-size:13px;">
+                <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-1')">[Abstract]</a>
+                <a href="https://ieeexplore.ieee.org/document/11209498">[Paper]</a>
+                <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-1')">[BibTex]</a>
+                <a href="https://github.com/EasonTuT/ICME2025-CVNC">[Code]</a>
+            </div>
         </div>
         <div id="abstract-1" class="abstract-container">
             <div class="abstract-content">
