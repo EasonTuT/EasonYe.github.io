@@ -180,12 +180,12 @@ Selected Publication
         </div>
         <div style="font-size: 13px;">IEEE Transactions on Circuits and Systems for Video Technology (<strong>IEEE TCSVT</strong>)</div>
         <div class="paper-links" style="font-size:13px;">
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract1')">[Abstract]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-4')">[Abstract]</a>
             <a href="">[Paper]</a>
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex')">[BibTex]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-4')">[BibTex]</a>
             <a href="https://github.com/THPengL/SMART">[Code]</a>
         </div>
-        <div id="abstract1" class="abstract-container">
+        <div id="abstract-4" class="abstract-container">
             <div class="abstract-content">
                 Multi-view clustering has been empirically shown to improve learning performance by leveraging the inherent complementary information across multiple views of data. However, in real-world scenarios, collecting strictly aligned views is challenging, and learning from both aligned and unaligned data becomes a more practical solution. Partially View-aligned Clustering (PVC) aims to learn correspondences between misaligned view samples to better exploit the potential consistency and complementarity across views, including both aligned and unaligned data.
 However, most existing PVC methods fail to leverage unaligned data to capture the shared semantics among samples from the same cluster. Moreover, the inherent heterogeneity of multi-view data induces distributional shifts in representations, leading to inaccuracies in establishing meaningful correspondences between cross-view latent features and, consequently, impairing learning effectiveness.
@@ -194,7 +194,7 @@ After the optimization of the above mechanisms, our model smoothly performs sema
 Extensive experiments on eight benchmark datasets demonstrate that our method consistently outperforms existing approaches on the PVC problem.
             </div>
         </div>
-        <div id="Bibtex" class="abstract-container">
+        <div id="Bibtex-4" class="abstract-container">
             <div class="abstract-content">
                 None.
             </div>
@@ -219,12 +219,12 @@ Extensive experiments on eight benchmark datasets demonstrate that our method co
         </div>
         <div style="font-size: 13px;">The 40th Annual AAAI Conference on Artificial Intelligence(<strong>AAAI 2026</strong>)</div>
         <div class="paper-links" style="font-size:13px;">
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract1')">[Abstract]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-3')">[Abstract]</a>
             <a href="">[Paper]</a>
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex')">[BibTex]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-3')">[BibTex]</a>
             <a href="https://github.com/THPengL/SMART">[Code]</a>
         </div>
-        <div id="abstract1" class="abstract-container">
+        <div id="abstract-3" class="abstract-container">
             <div class="abstract-content">
                 Unsupervised cell type identification is crucial for uncovering and characterizing heterogeneous populations in single cell omics studies. Although a range of clustering methods have been developed, most focus exclusively on intrinsic cellular structure and ignore the pivotal role of cell-gene associations, which limits their ability to distinguish closely related cell types. To this end, we propose a Refinement Contrastive Learning framework (<strong>scRCL</strong>}) that explicitly incorporates cell-gene interactions to derive more informative representations. 
 Specifically, we introduce two contrastive distribution alignment components that reveal reliable intrinsic cellular structures by effectively exploiting cell-cell structural relationships.
@@ -232,7 +232,7 @@ Additionally, we develop a refinement module that integrates gene-correlation st
 Extensive experiments on several single‑cell RNA‑seq and spatial transcriptomics benchmark datasets demonstrate that our method consistently outperforms state-of-the-art baselines in cell-type identification accuracy. Moreover, downstream biological analyses confirm that the recovered cell populations exhibit coherent gene‑expression signatures, further validating the biological relevance of our approach.
             </div>
         </div>
-        <div id="Bibtex" class="abstract-container">
+        <div id="Bibtex-3" class="abstract-container">
             <div class="abstract-content">
                 None.
             </div>
@@ -257,12 +257,12 @@ Extensive experiments on several single‑cell RNA‑seq and spatial transcripto
         </div>
         <div style="font-size: 13px;">IEEE Transactions on Knowledge and Data Engineering(<strong>IEEE TKDE</strong>)</div>
         <div class="paper-links" style="font-size:13px;">
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract1')">[Abstract]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-2')">[Abstract]</a>
             <a href="https://ieeexplore.ieee.org/abstract/document/11206540">[Paper]</a>
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex')">[BibTex]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-2')">[BibTex]</a>
             <a href="https://github.com/THPengL/NeuCGC">[Code]</a>
         </div>
-        <div id="abstract1" class="abstract-container">
+        <div id="abstract-2" class="abstract-container">
             <div class="abstract-content">
                 Recently, neighbor-based contrastive learning has been introduced to effectively exploit neighborhood information for clustering. However, these methods rely on the homophily assumption—that connected nodes share similar class labels and should therefore be close in feature space—which fails to account for the varying homophily levels in real-world graphs.
 As a result, applying contrastive learning to low-homophily graphs may lead to indistinguishable node representations due to unreliable neighborhood information, making it challenging to identify trustworthy neighborhoods with varying homophily levels in graph clustering.
@@ -271,7 +271,7 @@ Leveraging neutral pairs in contrastive learning, our method incorporates two ke
 Experimental results demonstrate the effectiveness and robustness of our approach, outperforming other state-of-the-art graph clustering methods.
             </div>
         </div>
-        <div id="Bibtex" class="abstract-container">
+        <div id="Bibtex-2" class="abstract-container">
             <div class="abstract-content">
                 @ARTICLE{11206540,
                 author={Peng, Liang and Ye, Yixuan and Liu, Cheng and Che, Hangjun and Leung, Man-Fai and Wu, Si and Wong, Hau-San},
@@ -289,7 +289,7 @@ Experimental results demonstrate the effectiveness and robustness of our approac
 </div>
 
 <div class="publication-card">
-    <img src="images/ICME2025.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
+    <img src="images/ICME2025.jpg" alt="Raa" width="200" height="100" style="margin-right: 20px;">
     <div>
         <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
         Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning
@@ -305,17 +305,17 @@ Experimental results demonstrate the effectiveness and robustness of our approac
         </div>
         <div style="font-size: 13px;">The 26th IEEE International Conference on Multimedia and Expo(<strong>ICME 2025</strong>)</div>
         <div class="paper-links" style="font-size:13px;">
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract1')">[Abstract]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-1')">[Abstract]</a>
             <a href="https://ieeexplore.ieee.org/document/11209498">[Paper]</a>
-            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex')">[BibTex]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-1')">[BibTex]</a>
             <a href="https://github.com/EasonTuT/ICME2025-CVNC">[Code]</a>
         </div>
-        <div id="abstract1" class="abstract-container">
+        <div id="abstract-1" class="abstract-container">
             <div class="abstract-content">
                 Multi-view clustering (MVC) has shown that leveraging both consistency and complementary information across views enhances clustering performance. However, most existing methods focus on aligning features into the same dimension, often neglecting cross-view heterogeneity and introducing discrepancies. To address this, we propose a novel multi-view clustering framework that combines cross-view neighborhood contrastive learning with a cross-attention view-mixup feature learning mechanism. Specifically, the cross-attention view-mixup module learns view-invariant feature representations by capturing complementary and consistent information, while the neighborhood contrastive learning module uncovers semantic structures across views based on the learned mixup features. By implicitly performing feature mixup across views and effectively integrating cross-view neighborhood contrastive learning, our method alleviates cross-view discrepancies and enables more effective integration of complementary and consistent information, ultimately enhancing clustering performance. Experiments conducted on several real datasets demonstrate the effectiveness of our proposed method in comparision with several representative MVC approaches.
             </div>
         </div>
-        <div id="Bibtex" class="abstract-container">
+        <div id="Bibtex-1" class="abstract-container">
             <div class="abstract-content">
                 @INPROCEEDINGS{11209498,
   author={Ye, Yixuan and Zhang, Yang and Peng, Liang and Li, Rui and Liu, Cheng and Wu, Si and Wong, Hau-San},
