@@ -48,7 +48,7 @@ redirect_from:
     /* Publication card updated for fixed image layout */
 .publication-card {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start;  /* 保持顶部对齐 */
     padding: 16px;
     border: 1.5px solid #ddd;
     border-radius: 8px;
@@ -56,7 +56,7 @@ redirect_from:
     box-sizing: border-box;
     margin-bottom: 20px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 140px; /* 设置最小高度，防止内容展开时卡片收缩 */
+    min-height: 120px; /* 移除之前固定的140px，改为更灵活的最小高度 */
 }
 
 .publication-card:hover {
@@ -144,25 +144,28 @@ redirect_from:
 
 /* Image wrapper for lightbox - modified for fixed dimensions */
 .image-wrapper {
-    width: 200px;        /* 固定宽度 */
-    height: 120px;       /* 固定高度 */
+    width: 200px;        
+    height: auto;        /* 改为自动高度 */
+    min-height: 120px;   /* 设置最小高度以保持基本比例 */
     margin-right: 20px;
     cursor: pointer;
     border-radius: 6px;
     overflow: hidden;
-    flex-shrink: 0;      /* 防止收缩 */
-    position: sticky;    /* 添加粘性定位 */
-    top: 20px;           /* 设置粘性定位的偏移量 */
-    align-self: flex-start; /* 确保图像始终对齐到顶部 */
+    flex-shrink: 0;      
+    align-self: flex-start; /* 保持与文本顶部对齐 */
+    display: flex;
+    align-items: center;     /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
 }
 
 .paper-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;   /* 关键：裁剪图片以填充整个容器 */
+    height: auto;        /* 高度自适应 */
+    max-height: 100%;    /* 最大高度不超过容器 */
+    object-fit: contain; /* 保持图片完整显示，不裁剪 */
     object-position: center; /* 图片居中显示 */
     transition: transform 0.2s;
-    border-radius: 4px;  /* 可选：与容器保持一致的圆角 */
+    border-radius: 4px;
 }
 
 .paper-image:hover {
@@ -301,7 +304,7 @@ Extensive experiments on eight benchmark datasets demonstrate that our method co
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-3')">[Abstract]</a>
             <a href="#">[Paper]</a>
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-3')">[BibTex]</a>
-            <a href="https://github.com/THPengL/SMART">[Code]</a>
+            <a href="https://github.com/THPengL/scRCL">[Code]</a>
         </div>
         <div id="abstract-3" class="abstract-container">
             <div class="abstract-content">
