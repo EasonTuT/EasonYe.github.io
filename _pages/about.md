@@ -147,12 +147,18 @@ redirect_from:
         overflow: hidden;
         flex-shrink: 0;
         position: relative;
+        /* 让内容靠下显示（下移图片） */
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 4px; /* 微调下移量，可按需调整 */
     }
-
+    
     .paper-image {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain; /* 关键：完整显示整图，不裁剪 */
+        object-position: center bottom; /* 可选：让图片靠下对齐 */
         transition: transform 0.2s;
     }
 
