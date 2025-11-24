@@ -161,7 +161,7 @@ News
 - *[NeuCGC] is accepted in IEEE TKDE &#128293;*
 - *[CVNC] is accepted in ICME 2025 &#128293;*
 
-Publications
+Selected Publications(* equal contribution, &dagger corresponding author)
 --------------
 <div class="publication-card">
     <img src="images/TCSVT25.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
@@ -206,11 +206,11 @@ Extensive experiments on eight benchmark datasets demonstrate that our method co
     <img src="images/AAAI26.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
     <div>
         <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
-        SMART: Semantic Matching Contrastive Learning for Partially View-Aligned Clustering
+        Refinement Contrastive Learning of Cell-Gene Associations for Unsupervised Cell Type Identification
         </span><br>
         <div class="author-links" style="font-size: 13px">
             <a href="" target="_blank">Liang Peng</a>*, 
-            <a href="" target="_blank">Haopeng Liu</a>,
+            <a href="" target="_blank">Haopeng Liu</a>*,
             <a href="" target="_blank"><strong>Yixuan Ye</strong></a>*, 
             <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
             <a href="" target="_blank">Wenjun Shen</a>,
