@@ -1,0 +1,246 @@
+---
+permalink: /
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+<style>
+    .experience-card {
+        display: flex;
+        align-items: center;
+        background: #f9f9f9;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 0px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .experience-card:hover {
+       
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .experience-logo {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+        border-radius: 8px;
+        object-fit: contain;
+    }
+    .experience-info {
+        font-family: "Segoe UI", sans-serif;
+    }
+    .experience-info strong {
+        font-size: 1.1em;
+    }
+    .experience-info a {
+        text-decoration: none;
+        color: #ca6f6f;
+    }
+    .experience-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    .experience-card {
+        box-sizing: border-box;
+    }
+    .publication-card {
+        display: flex;
+        align-items: center;
+        padding: 3px;
+        border: 1.5px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+        box-sizing: border-box;
+        margin-bottom: 20px; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .publication-card:hover {
+       
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .publication-card.featured {
+        border-color: #f5bba7;       /* 更浅的哈密瓜色边框 */
+        box-shadow: 0 4px 8px rgba(242, 166, 120, 0.2); /* 更柔和的初始阴影 */
+        z-index: 10;
+        /* background: #fef5f1;         /* 非常浅的哈密瓜色背景 */
+    }
+
+    .publication-card.featured:hover {
+        box-shadow: 0 8px 16px rgba(242, 166, 120, 0.4); 
+    }
+    .paper-links a {
+      color: #ca6f6f !important;
+      text-decoration: none;
+    }
+  
+    .paper-links a:hover {
+        color: #c71585 !important;
+        text-decoration: underline;
+    }
+
+    .author-links a {
+      color: #494E52 !important;
+      text-decoration: none;
+    }
+  
+    .author-links a:hover {
+        color: #000000 !important;
+        text-decoration: underline;
+    }
+    
+    /* Abstract section styles */
+    .abstract-container {
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 8px;
+        display: none;
+    }
+    
+    .abstract-content {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    .abstract-toggle {
+        cursor: pointer;
+        font-weight: normal;
+        display: inline-block;
+        font-size: 13px;
+    }
+    
+    .abstract-toggle:hover {
+        text-decoration: underline;
+    }
+</style>
+<html> 
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+        body {
+            background-color:	 #FFFFFF;
+            font-family: 'Arial Rounded MT Bold', 'Verdana', sans-serif;
+            font-size: 15px;
+        }
+        .main-heading {
+            font-family: 'Permanent Marker', cursive;
+            text-align: center;
+            color: #ca6f6f;
+        }
+        div.markdown-body a,a {
+            text-decoration: none !important;
+            color: #ca6f6f;
+            transition: all 0.3s ease; /* 平滑过渡效果 */
+        }
+        div.markdown-body a:hover, a:hover {
+            color: #c71585;            /* 悬浮时变深一点的颜色 */
+            text-decoration: underline; /* 加上悬浮时的下划线 */
+        }
+    </style>
+</head>
+<body>
+<h1 class="main-heading">Hi there <img src="images/Hi.gif" width="40px"> Welcome to my Homepage!</h1>
+</body>
+</html>
+
+I am an undergraduate (2022-2026) at Shantou University, focusing on World Model and Multi-modal.
+
+I work at [JPG@CSU](https://csu-jpg.github.io) with [Prof. Alex Jinpeng Wang](https://fingerrec.github.io).
+Previously I worked at Shantou University with [Prof. Cheng Liu](https://cliu272.github.io).
+
+News
+---------------
+- *[SMART] is accepted in IEEE TCSVT &#128293;*
+- *[scRCL] is accepted in AAAI 2026 &#128293;*
+- *[NeuCGC] is accepted in IEEE TKDE &#128293;*
+- *[CVNC] is accepted in ICME 2025 &#128293;*
+
+Publications
+--------------
+<div class="publication-card">
+    <img src="images/TCSVT25.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
+    <div>
+        <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
+        SMART: Semantic Matching Contrastive Learning for Partially View-Aligned Clustering
+        </span><br>
+        <div class="author-links" style="font-size: 13px">
+            <a href="" target="_blank">Liang Peng</a>*, 
+            <a href="" target="_blank"><strong>Yixuan Ye</strong></a>*, 
+            <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
+            <a href="" target="_blank">Hangjun Che</a>,
+            <a href="" target="_blank">Fei Wang</a>,
+            <a href="" target="_blank">Zhiwen Yu</a>,<br>
+            <a href="" target="_blank">Hau-San Wong</a>
+        </div>
+        <div class="paper-links" style="font-size:13px;">
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract1')">[Abstract]</a>
+            <a href="">[Paper]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex')">[BibTex]</a>
+            <a href="https://github.com/THPengL/SMART">[Code]</a>
+        </div>
+        <div id="abstract1" class="abstract-container">
+            <div class="abstract-content">
+                This is the abstract content for SMART: Semantic Matching Contrastive Learning for Partially View-Aligned Clustering. 
+                The abstract will appear here when you click on the [Abstract] link. 
+                You can replace this text with the actual abstract content of your paper.
+                This provides a clean and organized way to display detailed information about your research work.
+            </div>
+        </div>
+        <div id="Bibtex" class="abstract-container">
+            <div class="abstract-content">
+                kkkkkkkkkk.
+            </div>
+        </div>
+    </div>
+</div>
+
+Awards
+--------
+- National Scholarship 2025
+
+Service
+--------
+- Reviewer for ICME 2025-2026
+- Reviewer for IEEE TKDE
+
+Experience
+--------------
+<div class="experience-container">
+  <div class="experience-card">
+      <img src="images/CSU.png" alt="CSU logo" class="experience-logo">
+      <div class="experience-info">
+          <strong>Central South University</strong><br>
+          July 2026 - June 2029<br>
+          M.S at <a href="https://csu-jpg.github.io"><em>JPG</em></a>
+      </div>
+  </div>
+
+  <div class="experience-card">
+      <img src="images/STU.png" alt="STU logo" class="experience-logo">
+      <div class="experience-info">
+          <strong>Shantou University</strong><br>
+          Sep 2022 - July 2026<br>
+          B.E Rank 1/79
+      </div>
+  </div>
+</div>
+
+<script>
+function toggleAbstract(event, abstractId) {
+    event.preventDefault();
+    const abstractContainer = document.getElementById(abstractId);
+    const toggleLink = event.target;
+    
+    if (abstractContainer.style.display === 'none' || abstractContainer.style.display === '') {
+        abstractContainer.style.display = 'block';
+    } else {
+        abstractContainer.style.display = 'none';
+    }
+}
+</script>
