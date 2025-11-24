@@ -275,12 +275,14 @@ Experimental results demonstrate the effectiveness and robustness of our approac
         <div id="Bibtex-2" class="abstract-container">
             <div class="abstract-content">
                 @ARTICLE{11206540,
-                author={Peng, Liang and Ye, Yixuan and Liu, Cheng and Che, Hangjun and Leung, Man-Fai and Wu, Si and Wong, Hau-San},<sr>
-                journal={IEEE Transactions on Knowledge and Data Engineering},<sr> 
-                title={Trustworthy Neighborhoods Mining: Homophily-Aware Neutral Contrastive Learning for Graph Clustering},<sr> 
-                year={2025},<sr>
-                pages={1-15},<sr>
-                keywords={Contrastive learning;Reliability;Computer science;Representation learning;Estimation;Silicon;Semantics;Robustness;Nickel;Learning systems;Contrastive Graph Clustering;Graph Homophily},<sr>
+                author={Peng, Liang and Ye, Yixuan and Liu, Cheng and Che, Hangjun and Leung, Man-Fai and Wu, Si and Wong, Hau-San},
+                journal={IEEE Transactions on Knowledge and Data Engineering}, 
+                title={Trustworthy Neighborhoods Mining: Homophily-Aware Neutral Contrastive Learning for Graph Clustering}, 
+                year={2025},
+                volume={},
+                number={},
+                pages={1-15},
+                keywords={Contrastive learning;Reliability;Computer science;Representation learning;Estimation;Silicon;Semantics;Robustness;Nickel;Learning systems;Contrastive Graph Clustering;Graph Homophily},
                 doi={10.1109/TKDE.2025.3622998}}
             </div>
         </div>
@@ -316,11 +318,13 @@ Experimental results demonstrate the effectiveness and robustness of our approac
         </div>
         <div id="Bibtex-1" class="abstract-container">
             <div class="abstract-content">
-               @INPROCEEDINGS{11209498,
+                @INPROCEEDINGS{11209498,
   author={Ye, Yixuan and Zhang, Yang and Peng, Liang and Li, Rui and Liu, Cheng and Wu, Si and Wong, Hau-San},
-  booktitle={2025 IEEE International Conference on Multimedia and Expo (ICME)},
-  title={Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning},
+  booktitle={2025 IEEE International Conference on Multimedia and Expo (ICME)}, 
+  title={Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning}, 
   year={2025},
+  volume={},
+  number={},
   pages={1-6},
   keywords={Representation learning;Semantics;Contrastive learning;Benchmark testing;Multi-view clustering;Cross-view contrastive learning;Cross-attention},
   doi={10.1109/ICME59968.2025.11209498}}
