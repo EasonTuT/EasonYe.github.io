@@ -6,9 +6,6 @@ redirect_from:
   - /about.html
 ---
 <style>
-    html {
-    scroll-behavior: smooth; /* 启用平滑滚动 */
-}
     .experience-card {
         display: flex;
         align-items: center;
@@ -227,7 +224,7 @@ redirect_from:
     </style>
 </head>
 <body>
-<h1 id="introduction",class="main-heading">Hi there <img src="images/Hi.gif" width="40px"> Welcome to my Homepage!</h1>
+<h1 id="introduction" class="main-heading">Hi there <img src="images/Hi.gif" width="40px"> Welcome to my Homepage!</h1>
 
 <p>I am an undergraduate (2022-2026) at Shantou University, focusing on World Model and Multi-modal.</p>
 
