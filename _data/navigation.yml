@@ -7,12 +7,12 @@
   main:
   - title: "Introduction"
     url: "#introduction"
-    
-  - title: "Publications"  # 或者您希望显示为 "Selected Publication" 也可以
-    url: "#publications"   # 指向 id="publications" 的元素
 
   - title: "News"          # 添加 News 链接
     url: "#news"           # 指向 id="news" 的元素
+
+  - title: "Publications"  # 或者您希望显示为 "Selected Publication" 也可以
+    url: "#publications"   # 指向 id="publications" 的元素
 
   - title: "Awards"        # 添加 Awards 链接
     url: "#awards"         # 指向 id="awards" 的元素
