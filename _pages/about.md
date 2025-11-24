@@ -46,148 +46,151 @@ redirect_from:
     }
 
     /* Publication card updated for fixed image layout */
-    .publication-card {
-        display: flex;
-        align-items: flex-start;
-        padding: 16px;
-        border: 1.5px solid #ddd;
-        border-radius: 8px;
-        background: #fff;
-        box-sizing: border-box;
-        margin-bottom: 20px; 
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.publication-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+    margin-bottom: 20px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 140px; /* 设置最小高度，防止内容展开时卡片收缩 */
+}
 
-    .publication-card:hover {
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
+.publication-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
 
-    .publication-card.featured {
-        border-color: #f5bba7;
-        box-shadow: 0 4px 8px rgba(242, 166, 120, 0.2);
-        z-index: 10;
-    }
+.publication-card.featured {
+    border-color: #f5bba7;
+    box-shadow: 0 4px 8px rgba(242, 166, 120, 0.2);
+    z-index: 10;
+}
 
-    .publication-card.featured:hover {
-        box-shadow: 0 8px 16px rgba(242, 166, 120, 0.4); 
-    }
+.publication-card.featured:hover {
+    box-shadow: 0 8px 16px rgba(242, 166, 120, 0.4); 
+}
 
-    .paper-links a {
-        color: #ca6f6f !important;
-        text-decoration: none;
-    }
-  
-    .paper-links a:hover {
-        color: #c71585 !important;
-        text-decoration: underline;
-    }
+.paper-links a {
+    color: #ca6f6f !important;
+    text-decoration: none;
+}
 
-    .author-links a {
-        color: #494E52 !important;
-        text-decoration: none;
-    }
-  
-    .author-links a:hover {
-        color: #000000 !important;
-        text-decoration: underline;
-    }
-    
-    /* Abstract section styles */
-    .abstract-container {
-        background-color: #f5f5f5;
-        border-radius: 8px;
-        padding: 12px;
-        margin-top: 8px;
-        display: none;
-    }
-    
-    .abstract-content {
-        font-size: 13px;
-        line-height: 1.5;
-    }
-    
-    .abstract-toggle {
-        cursor: pointer;
-        font-weight: normal;
-        display: inline-block;
-        font-size: 13px;
-    }
-    
-    .abstract-toggle:hover {
-        text-decoration: underline;
-    }
+.paper-links a:hover {
+    color: #c71585 !important;
+    text-decoration: underline;
+}
 
-    /* Bibtex section styles */
-    .bibtex-container {
-        background-color: #f5f5f5;
-        border-radius: 8px;
-        padding: 12px;
-        margin-top: 8px;
-        display: none;
-    }
+.author-links a {
+    color: #494E52 !important;
+    text-decoration: none;
+}
 
-    .bibtex-content pre {
-        font-size: 13px;
-        line-height: 1.5;
-        font-family: 'Arial Rounded MT Bold', 'Verdana', sans-serif;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        margin: 0;
-        padding: 0;
-        overflow-wrap: break-word;
-    }
+.author-links a:hover {
+    color: #000000 !important;
+    text-decoration: underline;
+}
 
-    /* Image wrapper for lightbox - modified for fixed dimensions */
-    .image-wrapper {
-        width: 200px;        /* 固定宽度 */
-        height: 120px;       /* 固定高度 */
-        margin-right: 20px;
-        cursor: pointer;
-        border-radius: 6px;
-        overflow: hidden;
-        flex-shrink: 0;
-        position: relative;
-        display: flex;
-        align-items: center;     /* 垂直居中 */
-        justify-content: center; /* 水平居中 */
-        flex-shrink: 0;
-    }
-    
-    .paper-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;   /* 关键：裁剪图片以填充整个容器 */
-        object-position: center; /* 图片居中显示 */
-        transition: transform 0.2s;
-        border-radius: 4px;  /* 可选：与容器保持一致的圆角 */
-    }
-    
-    .paper-image:hover {
-        transform: scale(1.05);
-    }
+/* Abstract section styles */
+.abstract-container {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 8px;
+    display: none;
+    position: relative; /* 添加相对定位 */
+    z-index: 1; /* 确保在正确层级 */
+}
 
-    /* Lightbox overlay */
-    #lightbox-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(250, 250, 250, 0.88); /* 浅灰白 + 高透明度 */
-        backdrop-filter: blur(4px); /* 可选：毛玻璃效果，更现代 */
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 10000;
-    }
-    
-    #lightbox-image {
-        max-width: 90%;
-        max-height: 90%;
-        border: 2px solid #e0e0e0;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-        border-radius: 8px; /* 可选圆角 */
-    }
+.abstract-content {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.abstract-toggle {
+    cursor: pointer;
+    font-weight: normal;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.abstract-toggle:hover {
+    text-decoration: underline;
+}
+
+/* Bibtex section styles */
+.bibtex-container {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 8px;
+    display: none;
+    position: relative; /* 添加相对定位 */
+    z-index: 1; /* 确保在正确层级 */
+}
+
+.bibtex-content pre {
+    font-size: 13px;
+    line-height: 1.5;
+    font-family: 'Arial Rounded MT Bold', 'Verdana', sans-serif;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+}
+
+/* Image wrapper for lightbox - modified for fixed dimensions */
+.image-wrapper {
+    width: 200px;        /* 固定宽度 */
+    height: 120px;       /* 固定高度 */
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;      /* 防止收缩 */
+    position: sticky;    /* 添加粘性定位 */
+    top: 20px;           /* 设置粘性定位的偏移量 */
+    align-self: flex-start; /* 确保图像始终对齐到顶部 */
+}
+
+.paper-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* 关键：裁剪图片以填充整个容器 */
+    object-position: center; /* 图片居中显示 */
+    transition: transform 0.2s;
+    border-radius: 4px;  /* 可选：与容器保持一致的圆角 */
+}
+
+.paper-image:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox overlay */
+#lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(250, 250, 250, 0.88); /* 浅灰白 + 高透明度 */
+    backdrop-filter: blur(4px); /* 可选：毛玻璃效果，更现代 */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+#lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 8px; /* 可选圆角 */
+}
 </style>
 
 <html> 
