@@ -316,14 +316,14 @@ Experimental results demonstrate the effectiveness and robustness of our approac
         </div>
         <div id="Bibtex-1" class="abstract-container">
             <div class="abstract-content">
-                @INPROCEEDINGS{11209498,<sr>
-  author={Ye, Yixuan and Zhang, Yang and Peng, Liang and Li, Rui and Liu, Cheng and Wu, Si and Wong, Hau-San},<sr>
-  booktitle={2025 IEEE International Conference on Multimedia and Expo (ICME)},<sr>
-  title={Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning},<sr>
-  year={2025},<sr>
-  pages={1-6},<sr>
-  keywords={Representation learning;Semantics;Contrastive learning;Benchmark testing;Multi-view clustering;Cross-view contrastive learning;Cross-attention},<sr>
-  doi={10.1109/ICME59968.2025.11209498}}
+                <pre>@INPROCEEDINGS{11209498,
+  author={Ye, Yixuan and Zhang, Yang and Peng, Liang and Li, Rui and Liu, Cheng and Wu, Si and Wong, Hau-San},
+  booktitle={2025 IEEE International Conference on Multimedia and Expo (ICME)},
+  title={Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning},
+  year={2025},
+  pages={1-6},
+  keywords={Representation learning;Semantics;Contrastive learning;Benchmark testing;Multi-view clustering;Cross-view contrastive learning;Cross-attention},
+  doi={10.1109/ICME59968.2025.11209498}}</pre>
             </div>
         </div>
     </div>
