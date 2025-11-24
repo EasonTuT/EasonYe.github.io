@@ -372,7 +372,7 @@ Experimental results demonstrate the effectiveness and robustness of our approac
 
 <div class="publication-card">
     <div class="image-wrapper" onclick="openLightbox('images/ICME2025.jpg')">
-        <img src="images/ICME2025.jpg" alt="CVNC" class="paper-image">
+        <img src="images/ICME2025.png" alt="CVNC" class="paper-image">
     </div>
     <div class="publication-details">
         <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
