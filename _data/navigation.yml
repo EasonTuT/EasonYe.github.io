@@ -1,18 +1,24 @@
 # main links links
 
-main:
-  - title: "Publications"
-    url: "https://scholar.google.com/citations?hl=zh-CN&user=dBEJhxcAAAAJ"
+# main:
+#   - title: "Publications"
+#     url: "https://scholar.google.com/citations?hl=zh-CN&user=dBEJhxcAAAAJ"
 
-  # - title: "CV-En"
-  #   url: /files/selen_resume.pdf
+  main:
+  - title: "Introduction"
+    url: "#introduction"
     
-  # # - title: "CV-Cn"
-  # #   url:   /files/chinese_resume.pdf  
+  - title: "Publications"  # 或者您希望显示为 "Selected Publication" 也可以
+    url: "#publications"   # 指向 id="publications" 的元素
 
-    
-  # - title: "Slide"
-  #   url: /files/selenslide.pdf
+  - title: "News"          # 添加 News 链接
+    url: "#news"           # 指向 id="news" 的元素
 
-  # - title: "Demos"
-  #   url: https://www.youtube.com/@SelenSu-j6h
+  - title: "Awards"        # 添加 Awards 链接
+    url: "#awards"         # 指向 id="awards" 的元素
+
+  - title: "Service"       # 添加 Service 链接
+    url: "#service"        # 指向 id="service" 的元素
+
+  - title: "Experience"    # 添加 Experience 链接
+    url: "#experience"     # 指向 id="experience" 的元素
