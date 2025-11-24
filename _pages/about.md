@@ -316,18 +316,19 @@ Experimental results demonstrate the effectiveness and robustness of our approac
                 Multi-view clustering (MVC) has shown that leveraging both consistency and complementary information across views enhances clustering performance. However, most existing methods focus on aligning features into the same dimension, often neglecting cross-view heterogeneity and introducing discrepancies. To address this, we propose a novel multi-view clustering framework that combines cross-view neighborhood contrastive learning with a cross-attention view-mixup feature learning mechanism. Specifically, the cross-attention view-mixup module learns view-invariant feature representations by capturing complementary and consistent information, while the neighborhood contrastive learning module uncovers semantic structures across views based on the learned mixup features. By implicitly performing feature mixup across views and effectively integrating cross-view neighborhood contrastive learning, our method alleviates cross-view discrepancies and enables more effective integration of complementary and consistent information, ultimately enhancing clustering performance. Experiments conducted on several real datasets demonstrate the effectiveness of our proposed method in comparision with several representative MVC approaches.
             </div>
         </div>
-        <div id="Bibtex-1" class="abstract-container">
-            <div class="abstract-content">
-                <pre>@INPROCEEDINGS{11209498,
-  author={Ye, Yixuan and Zhang, Yang and Peng, Liang and Li, Rui and Liu, Cheng and Wu, Si and Wong, Hau-San},
-  booktitle={2025 IEEE International Conference on Multimedia and Expo (ICME)}, 
-  title={Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning}, 
-  year={2025},
-  volume={},
-  number={},
-  pages={1-6},
-  keywords={Representation learning;Semantics;Contrastive learning;Benchmark testing;Multi-view clustering;Cross-view contrastive learning;Cross-attention},
-  doi={10.1109/ICME59968.2025.11209498}}</pre>
+        <div id="Bibtex-1" class="bibtex-container">
+            <div class="bibtex-content">
+        <pre style="white-space: pre-wrap; word-wrap: break-word; margin: 0; padding: 0;">
+          @INPROCEEDINGS{11209498,
+          author={Ye, Yixuan and Zhang, Yang and Peng, Liang and Li, Rui and Liu, Cheng and Wu, Si and Wong, Hau-San},
+          booktitle={2025 IEEE International Conference on Multimedia and Expo (ICME)}, 
+          title={Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning}, 
+          year={2025},
+          volume={},
+          number={},
+          pages={1-6},
+          keywords={Representation learning;Semantics;Contrastive learning;Benchmark testing;Multi-view clustering;Cross-view contrastive learning;Cross-attention},
+          doi={10.1109/ICME59968.2025.11209498}}</pre>
             </div>
         </div>
     </div>
