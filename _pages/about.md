@@ -167,18 +167,20 @@ redirect_from:
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(250, 250, 250, 0.88); /* 浅灰白 + 高透明度 */
+        backdrop-filter: blur(4px); /* 可选：毛玻璃效果，更现代 */
         display: none;
         justify-content: center;
         align-items: center;
         z-index: 10000;
     }
-
+    
     #lightbox-image {
         max-width: 90%;
         max-height: 90%;
-        border: 2px solid white;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        border: 2px solid #e0e0e0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        border-radius: 8px; /* 可选圆角 */
     }
 </style>
 
