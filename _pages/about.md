@@ -161,12 +161,7 @@ News
 - *[NeuCGC] is accepted in IEEE TKDE &#128293;*
 - *[CVNC] is accepted in ICME 2025 &#128293;*
 
-<div style="display: flex; align-items: center; margin-bottom: 20px;">
-  <h2 style="margin: 0; display: inline;">Selected Publications</h2>
-  <span style="font-size: 15px; margin-left: 8px; color: #444;">
-    (* equal contribution, &dagger; corresponding author)
-  </span>
-</div>
+Selected Publication
 --------------
 <div class="publication-card">
     <img src="images/TCSVT25.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
@@ -240,6 +235,98 @@ Extensive experiments on several single‑cell RNA‑seq and spatial transcripto
         <div id="Bibtex" class="abstract-container">
             <div class="abstract-content">
                 None.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="publication-card">
+    <img src="images/TKDE25.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
+    <div>
+        <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
+        Trustworthy Neighborhoods Mining: Homophily-Aware Neutral Contrastive Learning for Graph Clustering
+        </span><br>
+        <div class="author-links" style="font-size: 13px">
+            <a href="" target="_blank">Liang Peng</a>, 
+            <a href="" target="_blank"><strong>Yixuan Ye</strong></a>, 
+            <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
+            <a href="" target="_blank">Hangjun Che</a>,
+            <a href="" target="_blank">Man-Fai Leung</a>,
+            <a href="" target="_blank">Si Wu</a>,
+            <a href="" target="_blank">Hau-San Wong</a>
+        </div>
+        <div style="font-size: 13px;">IEEE Transactions on Knowledge and Data Engineering(<strong>IEEE TKDE</strong>)</div>
+        <div class="paper-links" style="font-size:13px;">
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract1')">[Abstract]</a>
+            <a href="https://ieeexplore.ieee.org/abstract/document/11206540">[Paper]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex')">[BibTex]</a>
+            <a href="https://github.com/THPengL/NeuCGC">[Code]</a>
+        </div>
+        <div id="abstract1" class="abstract-container">
+            <div class="abstract-content">
+                Recently, neighbor-based contrastive learning has been introduced to effectively exploit neighborhood information for clustering. However, these methods rely on the homophily assumption—that connected nodes share similar class labels and should therefore be close in feature space—which fails to account for the varying homophily levels in real-world graphs.
+As a result, applying contrastive learning to low-homophily graphs may lead to indistinguishable node representations due to unreliable neighborhood information, making it challenging to identify trustworthy neighborhoods with varying homophily levels in graph clustering.
+To tackle this, we introduce a novel neighborhood Neutral Contrastive Graph Clustering method NeuCGC that extends traditional contrastive learning by incorporating neutral pairs—node pairs treated as weighted positive pairs, rather than strictly positive or negative. These neutral pairs are dynamically adjusted based on the graph’s homophily level, enabling a more flexible and robust learning process. 
+Leveraging neutral pairs in contrastive learning, our method incorporates two key components: 1) an adaptive contrastive neighborhood distribution alignment that adjusts based on the homophily level of the given attribute graph, ensuring effective alignment of neighborhood distributions, and 2) a contrastive neighborhood node feature consistency learning mechanism that leverages reliable neighborhood information from high-confidence graphs to learn robust node representations, mitigating the adverse effects of varying homophily levels and effectively exploiting highly trustworthy neighborhood information.
+Experimental results demonstrate the effectiveness and robustness of our approach, outperforming other state-of-the-art graph clustering methods.
+            </div>
+        </div>
+        <div id="Bibtex" class="abstract-container">
+            <div class="abstract-content">
+                @ARTICLE{11206540,
+                author={Peng, Liang and Ye, Yixuan and Liu, Cheng and Che, Hangjun and Leung, Man-Fai and Wu, Si and Wong, Hau-San},
+                journal={IEEE Transactions on Knowledge and Data Engineering}, 
+                title={Trustworthy Neighborhoods Mining: Homophily-Aware Neutral Contrastive Learning for Graph Clustering}, 
+                year={2025},
+                volume={},
+                number={},
+                pages={1-15},
+                keywords={Contrastive learning;Reliability;Computer science;Representation learning;Estimation;Silicon;Semantics;Robustness;Nickel;Learning systems;Contrastive Graph Clustering;Graph Homophily},
+                doi={10.1109/TKDE.2025.3622998}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="publication-card">
+    <img src="images/ICME2025.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
+    <div>
+        <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
+        Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning
+        </span><br>
+        <div class="author-links" style="font-size: 13px">
+            <a href="" target="_blank"><strong>Yixuan Ye</strong></a>, 
+            <a href="" target="_blank"></a>,
+            <a href="" target="_blank">Liang Peng</a>,
+            <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
+            <a href="" target="_blank">Wenjun Shen</a>,
+            <a href="" target="_blank">Si Wu</a>,
+            <a href="" target="_blank">Hau-San Wong</a>
+        </div>
+        <div style="font-size: 13px;">The 26th IEEE International Conference on Multimedia and Expo(<strong>ICME 2025</strong>)</div>
+        <div class="paper-links" style="font-size:13px;">
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract1')">[Abstract]</a>
+            <a href="https://ieeexplore.ieee.org/document/11209498">[Paper]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex')">[BibTex]</a>
+            <a href="https://github.com/EasonTuT/ICME2025-CVNC">[Code]</a>
+        </div>
+        <div id="abstract1" class="abstract-container">
+            <div class="abstract-content">
+                Multi-view clustering (MVC) has shown that leveraging both consistency and complementary information across views enhances clustering performance. However, most existing methods focus on aligning features into the same dimension, often neglecting cross-view heterogeneity and introducing discrepancies. To address this, we propose a novel multi-view clustering framework that combines cross-view neighborhood contrastive learning with a cross-attention view-mixup feature learning mechanism. Specifically, the cross-attention view-mixup module learns view-invariant feature representations by capturing complementary and consistent information, while the neighborhood contrastive learning module uncovers semantic structures across views based on the learned mixup features. By implicitly performing feature mixup across views and effectively integrating cross-view neighborhood contrastive learning, our method alleviates cross-view discrepancies and enables more effective integration of complementary and consistent information, ultimately enhancing clustering performance. Experiments conducted on several real datasets demonstrate the effectiveness of our proposed method in comparision with several representative MVC approaches.
+            </div>
+        </div>
+        <div id="Bibtex" class="abstract-container">
+            <div class="abstract-content">
+                @INPROCEEDINGS{11209498,
+  author={Ye, Yixuan and Zhang, Yang and Peng, Liang and Li, Rui and Liu, Cheng and Wu, Si and Wong, Hau-San},
+  booktitle={2025 IEEE International Conference on Multimedia and Expo (ICME)}, 
+  title={Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Representation learning;Semantics;Contrastive learning;Benchmark testing;Multi-view clustering;Cross-view contrastive learning;Cross-attention},
+  doi={10.1109/ICME59968.2025.11209498}}
             </div>
         </div>
     </div>
