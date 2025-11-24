@@ -117,28 +117,6 @@ redirect_from:
         text-decoration: underline;
     }
     
-    /* BibTeX section styles */
-    .bibtex-container {
-        background-color: #f8f9fa;
-        border-radius: 8px;
-        padding: 15px;
-        margin-top: 8px;
-        display: none;
-        font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
-        font-size: 12px;
-        line-height: 1.5;
-        border: 1px solid #e0e0e0;
-        overflow-x: auto;
-        white-space: pre-wrap;
-    }
-
-    .bibtex-content {
-        color: #333;
-        margin: 0;
-        padding: 0;
-        tab-size: 4;
-    }
-
 </style>
 <html> 
 <head>
@@ -346,14 +324,14 @@ Experimental results demonstrate the effectiveness and robustness of our approac
                 Multi-view clustering (MVC) has shown that leveraging both consistency and complementary information across views enhances clustering performance. However, most existing methods focus on aligning features into the same dimension, often neglecting cross-view heterogeneity and introducing discrepancies. To address this, we propose a novel multi-view clustering framework that combines cross-view neighborhood contrastive learning with a cross-attention view-mixup feature learning mechanism. Specifically, the cross-attention view-mixup module learns view-invariant feature representations by capturing complementary and consistent information, while the neighborhood contrastive learning module uncovers semantic structures across views based on the learned mixup features. By implicitly performing feature mixup across views and effectively integrating cross-view neighborhood contrastive learning, our method alleviates cross-view discrepancies and enables more effective integration of complementary and consistent information, ultimately enhancing clustering performance. Experiments conducted on several real datasets demonstrate the effectiveness of our proposed method in comparision with several representative MVC approaches.
             </div>
         </div>
-        <div id="Bibtex-1" class="bibtex-container">
-            <div class="bibtex-content">
-                @inproceedings{ye2025cross,
-  title={Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning},
-  author={Ye, Yixuan and Zhang, Yang and Peng, Liang and Li, Rui and Liu, Cheng and Wu, Si and Wong, Hau-San},
-  booktitle={2025 IEEE International Conference on Multimedia and Expo (ICME)},
-  year={2025},
-  organization={IEEE}
+        <div id="Bibtex-1" class="abstract-container">
+            <div class="abstract-content">
+                @inproceedings{ye2025cross,<sr>
+                title={Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning},<sr>
+                author={Ye, Yixuan and Zhang, Yang and Peng, Liang and Li, Rui and Liu, Cheng and Wu, Si and Wong, Hau-San},<sr>
+                booktitle={2025 IEEE International Conference on Multimedia and Expo (ICME)},<sr>
+                year={2025},<sr>
+                organization={IEEE}
 }
             </div>
         </div>
@@ -398,13 +376,6 @@ function toggleAbstract(event, abstractId) {
     const toggleLink = event.target;
     
     if (abstractContainer.style.display === 'none' || abstractContainer.style.display === '') {
-        // 为BibTeX容器应用特殊样式
-        if (abstractId.startsWith('Bibtex-')) {
-            abstractContainer.style.fontFamily = "'Courier New', monospace";
-            abstractContainer.style.backgroundColor = "#f8f9fa";
-            abstractContainer.style.border = "1px solid #e0e0e0";
-            abstractContainer.style.padding = "15px";
-        }
         abstractContainer.style.display = 'block';
     } else {
         abstractContainer.style.display = 'none';
