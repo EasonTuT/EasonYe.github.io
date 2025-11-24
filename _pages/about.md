@@ -6,6 +6,9 @@ redirect_from:
   - /about.html
 ---
 <style>
+    html {
+    scroll-behavior: smooth; /* 启用平滑滚动 */
+}
     .experience-card {
         display: flex;
         align-items: center;
@@ -224,14 +227,14 @@ redirect_from:
     </style>
 </head>
 <body>
-<h1 class="main-heading">Hi there <img src="images/Hi.gif" width="40px"> Welcome to my Homepage!</h1>
+<h1 id="introduction",class="main-heading">Hi there <img src="images/Hi.gif" width="40px"> Welcome to my Homepage!</h1>
 
 <p>I am an undergraduate (2022-2026) at Shantou University, focusing on World Model and Multi-modal.</p>
 
 <p>I work at <a href="https://csu-jpg.github.io">JPG@CSU</a> with <a href="https://fingerrec.github.io">Prof. Alex Jinpeng Wang</a>.<br>
 Previously I worked at Shantou University with <a href="https://cliu272.github.io">Prof. Cheng Liu</a>.</p>
 
-<h2>News</h2>
+<h2 id="news">News</h2>
 <ul>
     <li><strong>[SMART]</strong> is accepted in IEEE TCSVT &#128293;</li>
     <li><strong>[scRCL]</strong> is accepted in AAAI 2026 &#128293;</li>
@@ -239,7 +242,7 @@ Previously I worked at Shantou University with <a href="https://cliu272.github.i
     <li><strong>[CVNC]</strong> is accepted in ICME 2025 &#128293;</li>
 </ul>
 
-<h2>Selected Publication</h2>
+<h2 id="publications">Selected Publication</h2>
 
 <div class="publication-card">
     <div class="image-wrapper" onclick="openLightbox('images/TCSVT25.png')">
@@ -414,18 +417,18 @@ Experimental results demonstrate the effectiveness and robustness of our approac
     </div>
 </div>
 
-<h2>Awards</h2>
+<h2 id="awards">Awards</h2>
 <ul>
     <li>National Scholarship 2025</li>
 </ul>
 
-<h2>Service</h2>
+<h2 id="service">Service</h2>
 <ul>
     <li>Reviewer for ICME 2025-2026</li>
     <li>Reviewer for IEEE TKDE</li>
 </ul>
 
-<h2>Experience</h2>
+<h2 id="experience">Experience</h2>
 <div class="experience-container">
   <div class="experience-card">
       <img src="images/CSU.png" alt="CSU logo" class="experience-logo">
