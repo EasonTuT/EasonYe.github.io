@@ -17,7 +17,6 @@ redirect_from:
         transition: transform 0.3s, box-shadow 0.3s;
     }
     .experience-card:hover {
-       
         box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
     .experience-logo {
@@ -45,10 +44,12 @@ redirect_from:
     .experience-card {
         box-sizing: border-box;
     }
+
+    /* Publication card updated for fixed image layout */
     .publication-card {
         display: flex;
-        align-items: center;
-        padding: 3px;
+        align-items: flex-start;
+        padding: 16px;
         border: 1.5px solid #ddd;
         border-radius: 8px;
         background: #fff;
@@ -58,23 +59,22 @@ redirect_from:
     }
 
     .publication-card:hover {
-       
         box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
 
     .publication-card.featured {
-        border-color: #f5bba7;       /* 更浅的哈密瓜色边框 */
-        box-shadow: 0 4px 8px rgba(242, 166, 120, 0.2); /* 更柔和的初始阴影 */
+        border-color: #f5bba7;
+        box-shadow: 0 4px 8px rgba(242, 166, 120, 0.2);
         z-index: 10;
-        /* background: #fef5f1;         /* 非常浅的哈密瓜色背景 */
     }
 
     .publication-card.featured:hover {
         box-shadow: 0 8px 16px rgba(242, 166, 120, 0.4); 
     }
+
     .paper-links a {
-      color: #ca6f6f !important;
-      text-decoration: none;
+        color: #ca6f6f !important;
+        text-decoration: none;
     }
   
     .paper-links a:hover {
@@ -83,8 +83,8 @@ redirect_from:
     }
 
     .author-links a {
-      color: #494E52 !important;
-      text-decoration: none;
+        color: #494E52 !important;
+        text-decoration: none;
     }
   
     .author-links a:hover {
@@ -117,33 +117,71 @@ redirect_from:
         text-decoration: underline;
     }
 
-  /* Bibtex section styles */
-.bibtex-container {
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    padding: 12px;
-    margin-top: 8px;
-    display: none;
-}
+    /* Bibtex section styles */
+    .bibtex-container {
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 8px;
+        display: none;
+    }
 
-.bibtex-content pre {
-    /* 继承抽象部分的字体样式 */
-    font-size: 13px;
-    line-height: 1.5;
-    font-family: 'Arial Rounded MT Bold', 'Verdana', sans-serif;
+    .bibtex-content pre {
+        font-size: 13px;
+        line-height: 1.5;
+        font-family: 'Arial Rounded MT Bold', 'Verdana', sans-serif;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        margin: 0;
+        padding: 0;
+        overflow-wrap: break-word;
+    }
 
-    /* 保留你希望的换行行为 */
-    white-space: pre-wrap;
-    word-wrap: break-word;
+    /* Image wrapper for lightbox */
+    .image-wrapper {
+        width: 200px;
+        height: 100px;
+        margin-right: 20px;
+        cursor: pointer;
+        border-radius: 6px;
+        overflow: hidden;
+        flex-shrink: 0;
+        position: relative;
+    }
 
-    /* 去除默认 <pre> 的 margin/padding */
-    margin: 0;
-    padding: 0;
+    .paper-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.2s;
+    }
 
-    /* 可选：防止意外溢出 */
-    overflow-wrap: break-word;
-}
+    .paper-image:hover {
+        transform: scale(1.05);
+    }
+
+    /* Lightbox overlay */
+    #lightbox-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+
+    #lightbox-image {
+        max-width: 90%;
+        max-height: 90%;
+        border: 2px solid white;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
 </style>
+
 <html> 
 <head>
     <style>
@@ -151,7 +189,7 @@ redirect_from:
         @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
         body {
-            background-color:	 #FFFFFF;
+            background-color: #FFFFFF;
             font-family: 'Arial Rounded MT Bold', 'Verdana', sans-serif;
             font-size: 15px;
         }
@@ -160,39 +198,40 @@ redirect_from:
             text-align: center;
             color: #ca6f6f;
         }
-        div.markdown-body a,a {
+        div.markdown-body a, a {
             text-decoration: none !important;
             color: #ca6f6f;
-            transition: all 0.3s ease; /* 平滑过渡效果 */
+            transition: all 0.3s ease;
         }
         div.markdown-body a:hover, a:hover {
-            color: #c71585;            /* 悬浮时变深一点的颜色 */
-            text-decoration: underline; /* 加上悬浮时的下划线 */
+            color: #c71585;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 <h1 class="main-heading">Hi there <img src="images/Hi.gif" width="40px"> Welcome to my Homepage!</h1>
-</body>
-</html>
 
-I am an undergraduate (2022-2026) at Shantou University, focusing on World Model and Multi-modal.
+<p>I am an undergraduate (2022-2026) at Shantou University, focusing on World Model and Multi-modal.</p>
 
-I work at [JPG@CSU](https://csu-jpg.github.io) with [Prof. Alex Jinpeng Wang](https://fingerrec.github.io).
-Previously I worked at Shantou University with [Prof. Cheng Liu](https://cliu272.github.io).
+<p>I work at <a href="https://csu-jpg.github.io">JPG@CSU</a> with <a href="https://fingerrec.github.io">Prof. Alex Jinpeng Wang</a>.<br>
+Previously I worked at Shantou University with <a href="https://cliu272.github.io">Prof. Cheng Liu</a>.</p>
 
-News
----------------
-- *[SMART] is accepted in IEEE TCSVT &#128293;*
-- *[scRCL] is accepted in AAAI 2026 &#128293;*
-- *[NeuCGC] is accepted in IEEE TKDE &#128293;*
-- *[CVNC] is accepted in ICME 2025 &#128293;*
+<h2>News</h2>
+<ul>
+    <li><strong>[SMART]</strong> is accepted in IEEE TCSVT &#128293;</li>
+    <li><strong>[scRCL]</strong> is accepted in AAAI 2026 &#128293;</li>
+    <li><strong>[NeuCGC]</strong> is accepted in IEEE TKDE &#128293;</li>
+    <li><strong>[CVNC]</strong> is accepted in ICME 2025 &#128293;</li>
+</ul>
 
-Selected Publication
---------------
+<h2>Selected Publication</h2>
+
 <div class="publication-card">
-    <img src="images/TCSVT25.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
-    <div>
+    <div class="image-wrapper" onclick="openLightbox('images/TCSVT25.png')">
+        <img src="images/TCSVT25.png" alt="SMART" class="paper-image">
+    </div>
+    <div class="publication-details">
         <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
         SMART: Semantic Matching Contrastive Learning for Partially View-Aligned Clustering
         </span><br>
@@ -208,7 +247,7 @@ Selected Publication
         <div style="font-size: 13px;">IEEE Transactions on Circuits and Systems for Video Technology (<strong>IEEE TCSVT</strong>)</div>
         <div class="paper-links" style="font-size:13px;">
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-4')">[Abstract]</a>
-            <a href="">[Paper]</a>
+            <a href="#">[Paper]</a>
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-4')">[BibTex]</a>
             <a href="https://github.com/THPengL/SMART">[Code]</a>
         </div>
@@ -230,8 +269,10 @@ Extensive experiments on eight benchmark datasets demonstrate that our method co
 </div>
 
 <div class="publication-card">
-    <img src="images/AAAI26.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
-    <div>
+    <div class="image-wrapper" onclick="openLightbox('images/AAAI26.png')">
+        <img src="images/AAAI26.png" alt="scRCL" class="paper-image">
+    </div>
+    <div class="publication-details">
         <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
         Refinement Contrastive Learning of Cell-Gene Associations for Unsupervised Cell Type Identification
         </span><br>
@@ -244,16 +285,16 @@ Extensive experiments on eight benchmark datasets demonstrate that our method co
             <a href="" target="_blank">Si Wu</a>,
             <a href="" target="_blank">Hau-San Wong</a>
         </div>
-        <div style="font-size: 13px;">The 40th Annual AAAI Conference on Artificial Intelligence(<strong>AAAI 2026</strong>)</div>
+        <div style="font-size: 13px;">The 40th Annual AAAI Conference on Artificial Intelligence (<strong>AAAI 2026</strong>)</div>
         <div class="paper-links" style="font-size:13px;">
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-3')">[Abstract]</a>
-            <a href="">[Paper]</a>
+            <a href="#">[Paper]</a>
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-3')">[BibTex]</a>
             <a href="https://github.com/THPengL/SMART">[Code]</a>
         </div>
         <div id="abstract-3" class="abstract-container">
             <div class="abstract-content">
-                Unsupervised cell type identification is crucial for uncovering and characterizing heterogeneous populations in single cell omics studies. Although a range of clustering methods have been developed, most focus exclusively on intrinsic cellular structure and ignore the pivotal role of cell-gene associations, which limits their ability to distinguish closely related cell types. To this end, we propose a Refinement Contrastive Learning framework (<strong>scRCL</strong>}) that explicitly incorporates cell-gene interactions to derive more informative representations. 
+                Unsupervised cell type identification is crucial for uncovering and characterizing heterogeneous populations in single cell omics studies. Although a range of clustering methods have been developed, most focus exclusively on intrinsic cellular structure and ignore the pivotal role of cell-gene associations, which limits their ability to distinguish closely related cell types. To this end, we propose a Refinement Contrastive Learning framework (<strong>scRCL</strong>) that explicitly incorporates cell-gene interactions to derive more informative representations. 
 Specifically, we introduce two contrastive distribution alignment components that reveal reliable intrinsic cellular structures by effectively exploiting cell-cell structural relationships.
 Additionally, we develop a refinement module that integrates gene-correlation structure learning to enhance cell embeddings by capturing underlying cell-gene associations. This module strengthens connections between cells and their associated genes, refining the representation learning to exploiting biologically meaningful relationships.
 Extensive experiments on several single‑cell RNA‑seq and spatial transcriptomics benchmark datasets demonstrate that our method consistently outperforms state-of-the-art baselines in cell-type identification accuracy. Moreover, downstream biological analyses confirm that the recovered cell populations exhibit coherent gene‑expression signatures, further validating the biological relevance of our approach.
@@ -268,8 +309,10 @@ Extensive experiments on several single‑cell RNA‑seq and spatial transcripto
 </div>
 
 <div class="publication-card">
-    <img src="images/TKDE25.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
-    <div>
+    <div class="image-wrapper" onclick="openLightbox('images/TKDE25.png')">
+        <img src="images/TKDE25.png" alt="NeuCGC" class="paper-image">
+    </div>
+    <div class="publication-details">
         <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
         Trustworthy Neighborhoods Mining: Homophily-Aware Neutral Contrastive Learning for Graph Clustering
         </span><br>
@@ -282,7 +325,7 @@ Extensive experiments on several single‑cell RNA‑seq and spatial transcripto
             <a href="" target="_blank">Si Wu</a>,
             <a href="" target="_blank">Hau-San Wong</a>
         </div>
-        <div style="font-size: 13px;">IEEE Transactions on Knowledge and Data Engineering(<strong>IEEE TKDE</strong>)</div>
+        <div style="font-size: 13px;">IEEE Transactions on Knowledge and Data Engineering (<strong>IEEE TKDE</strong>)</div>
         <div class="paper-links" style="font-size:13px;">
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-2')">[Abstract]</a>
             <a href="https://ieeexplore.ieee.org/abstract/document/11206540">[Paper]</a>
@@ -298,37 +341,39 @@ Leveraging neutral pairs in contrastive learning, our method incorporates two ke
 Experimental results demonstrate the effectiveness and robustness of our approach, outperforming other state-of-the-art graph clustering methods.
             </div>
         </div>
-        <div id="Bibtex-2" class="abstract-container">
-            <div class="abstract-content">
-                @ARTICLE{11206540,
+        <div id="Bibtex-2" class="bibtex-container">
+            <div class="bibtex-content">
+                <pre>@ARTICLE{11206540,
                 author={Peng, Liang and Ye, Yixuan and Liu, Cheng and Che, Hangjun and Leung, Man-Fai and Wu, Si and Wong, Hau-San},
                 journal={IEEE Transactions on Knowledge and Data Engineering}, 
                 title={Trustworthy Neighborhoods Mining: Homophily-Aware Neutral Contrastive Learning for Graph Clustering}, 
                 year={2025},
                 pages={1-15},
                 keywords={Contrastive learning;Reliability;Computer science;Representation learning;Estimation;Silicon;Semantics;Robustness;Nickel;Learning systems;Contrastive Graph Clustering;Graph Homophily},
-                doi={10.1109/TKDE.2025.3622998}}
+                doi={10.1109/TKDE.2025.3622998}}</pre>
             </div>
         </div>
     </div>
 </div>
 
 <div class="publication-card">
-    <img src="images/ICME2025.jpg" alt="Raa" width="200" height="100" style="margin-right: 20px;">
-    <div>
+    <div class="image-wrapper" onclick="openLightbox('images/ICME2025.jpg')">
+        <img src="images/ICME2025.jpg" alt="CVNC" class="paper-image">
+    </div>
+    <div class="publication-details">
         <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
         Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning
         </span><br>
         <div class="author-links" style="font-size: 13px">
             <a href="" target="_blank"><strong>Yixuan Ye</strong></a>, 
-            <a href="" target="_blank"></a>,
+            <a href="" target="_blank">Yang Zhang</a>,
             <a href="" target="_blank">Liang Peng</a>,
             <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
-            <a href="" target="_blank">Wenjun Shen</a>,
+            <a href="" target="_blank">Rui Li</a>,
             <a href="" target="_blank">Si Wu</a>,
             <a href="" target="_blank">Hau-San Wong</a>
         </div>
-        <div style="font-size: 13px;">The 26th IEEE International Conference on Multimedia and Expo(<strong>ICME 2025</strong>)</div>
+        <div style="font-size: 13px;">The 26th IEEE International Conference on Multimedia and Expo (<strong>ICME 2025</strong>)</div>
         <div class="paper-links" style="font-size:13px;">
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-1')">[Abstract]</a>
             <a href="https://ieeexplore.ieee.org/document/11209498">[Paper]</a>
@@ -355,17 +400,18 @@ Experimental results demonstrate the effectiveness and robustness of our approac
     </div>
 </div>
 
-Awards
---------
-- National Scholarship 2025
+<h2>Awards</h2>
+<ul>
+    <li>National Scholarship 2025</li>
+</ul>
 
-Service
---------
-- Reviewer for ICME 2025-2026
-- Reviewer for IEEE TKDE
+<h2>Service</h2>
+<ul>
+    <li>Reviewer for ICME 2025-2026</li>
+    <li>Reviewer for IEEE TKDE</li>
+</ul>
 
-Experience
---------------
+<h2>Experience</h2>
 <div class="experience-container">
   <div class="experience-card">
       <img src="images/CSU.png" alt="CSU logo" class="experience-logo">
@@ -386,16 +432,39 @@ Experience
   </div>
 </div>
 
+<!-- Lightbox Overlay -->
+<div id="lightbox-overlay" onclick="closeLightbox()">
+    <img id="lightbox-image" src="" alt="Enlarged view">
+</div>
+
 <script>
 function toggleAbstract(event, abstractId) {
     event.preventDefault();
-    const abstractContainer = document.getElementById(abstractId);
-    const toggleLink = event.target;
-    
-    if (abstractContainer.style.display === 'none' || abstractContainer.style.display === '') {
-        abstractContainer.style.display = 'block';
+    const container = document.getElementById(abstractId);
+    if (container.style.display === 'block') {
+        container.style.display = 'none';
     } else {
-        abstractContainer.style.display = 'none';
+        container.style.display = 'block';
     }
 }
+
+function openLightbox(src) {
+    const overlay = document.getElementById('lightbox-overlay');
+    const img = document.getElementById('lightbox-image');
+    img.src = src;
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
 </script>
+
+</body>
+</html>
