@@ -186,15 +186,53 @@ Publications
         </div>
         <div id="abstract1" class="abstract-container">
             <div class="abstract-content">
-                This is the abstract content for SMART: Semantic Matching Contrastive Learning for Partially View-Aligned Clustering. 
-                The abstract will appear here when you click on the [Abstract] link. 
-                You can replace this text with the actual abstract content of your paper.
-                This provides a clean and organized way to display detailed information about your research work.
+                Multi-view clustering has been empirically shown to improve learning performance by leveraging the inherent complementary information across multiple views of data. However, in real-world scenarios, collecting strictly aligned views is challenging, and learning from both aligned and unaligned data becomes a more practical solution. Partially View-aligned Clustering (PVC) aims to learn correspondences between misaligned view samples to better exploit the potential consistency and complementarity across views, including both aligned and unaligned data.
+However, most existing PVC methods fail to leverage unaligned data to capture the shared semantics among samples from the same cluster. Moreover, the inherent heterogeneity of multi-view data induces distributional shifts in representations, leading to inaccuracies in establishing meaningful correspondences between cross-view latent features and, consequently, impairing learning effectiveness.
+To address these challenges, we propose a <strong>S</strong>emantic <strong>MA</strong>tching cont<strong>R</strong>as<strong>T</strong>ive learning model (SMART) for PVC. The main idea of our approach is to alleviate the influence of cross-view distributional shifts, thereby facilitating semantic matching contrastive learning to fully exploit semantic relationships in both aligned and unaligned data. Specifically, we mitigate view distribution shifts by aligning cross-view covariance matrices, which enables the inference of a semantic graph for all data. Guided by the learned semantic graph, we further exploit semantic consistency across views through semantic matching contrastive learning. 
+After the optimization of the above mechanisms, our model smoothly performs semantic matching for different view embeddings instead of the cumbersome view realignment, which enables the learned representations to enjoy richer category-level semantics and stronger robustness.
+Extensive experiments on eight benchmark datasets demonstrate that our method consistently outperforms existing approaches on the PVC problem.
             </div>
         </div>
         <div id="Bibtex" class="abstract-container">
             <div class="abstract-content">
-                kkkkkkkkkk.
+                None.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="publication-card">
+    <img src="images/AAAI26.png" alt="Raa" width="200" height="100" style="margin-right: 20px;">
+    <div>
+        <span style="color:#ca6f6f; font-weight:500; text-shadow: 0 0 0.8px rgba(202, 111, 111, 0.75);">
+        SMART: Semantic Matching Contrastive Learning for Partially View-Aligned Clustering
+        </span><br>
+        <div class="author-links" style="font-size: 13px">
+            <a href="" target="_blank">Liang Peng</a>*, 
+            <a href="" target="_blank">Haopeng Liu</a>,
+            <a href="" target="_blank"><strong>Yixuan Ye</strong></a>*, 
+            <a href="https://cliu272.github.io" target="_blank">Cheng Liu</a>&dagger;,
+            <a href="" target="_blank">Wenjun Shen</a>,
+            <a href="" target="_blank">Si Wu</a>,
+            <a href="" target="_blank">Hau-San Wong</a>
+        </div>
+        <div class="paper-links" style="font-size:13px;">
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract1')">[Abstract]</a>
+            <a href="">[Paper]</a>
+            <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex')">[BibTex]</a>
+            <a href="https://github.com/THPengL/SMART">[Code]</a>
+        </div>
+        <div id="abstract1" class="abstract-container">
+            <div class="abstract-content">
+                Unsupervised cell type identification is crucial for uncovering and characterizing heterogeneous populations in single cell omics studies. Although a range of clustering methods have been developed, most focus exclusively on intrinsic cellular structure and ignore the pivotal role of cell-gene associations, which limits their ability to distinguish closely related cell types. To this end, we propose a Refinement Contrastive Learning framework (<strong>scRCL</strong>}) that explicitly incorporates cell-gene interactions to derive more informative representations. 
+Specifically, we introduce two contrastive distribution alignment components that reveal reliable intrinsic cellular structures by effectively exploiting cell-cell structural relationships.
+Additionally, we develop a refinement module that integrates gene-correlation structure learning to enhance cell embeddings by capturing underlying cell-gene associations. This module strengthens connections between cells and their associated genes, refining the representation learning to exploiting biologically meaningful relationships.
+Extensive experiments on several single‑cell RNA‑seq and spatial transcriptomics benchmark datasets demonstrate that our method consistently outperforms state-of-the-art baselines in cell-type identification accuracy. Moreover, downstream biological analyses confirm that the recovered cell populations exhibit coherent gene‑expression signatures, further validating the biological relevance of our approach.
+            </div>
+        </div>
+        <div id="Bibtex" class="abstract-container">
+            <div class="abstract-content">
+                None.
             </div>
         </div>
     </div>
