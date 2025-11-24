@@ -27,7 +27,7 @@ redirect_from:
         object-fit: contain;
     }
     .experience-info {
-        font-family: "Segoe UI", sans-serif;
+        font-family: 'Arial Rounded MT Bold', 'Verdana', sans-serif;
     }
     .experience-info strong {
         font-size: 1.1em;
@@ -432,7 +432,7 @@ Experimental results demonstrate the effectiveness and robustness of our approac
       <div class="experience-info">
           <strong>Central South University</strong><br>
           July 2026 - June 2029<br>
-          M.S at <a href="https://csu-jpg.github.io"><em>JPG</em></a>
+          M.S at <a href="https://csu-jpg.github.io">JPG</a>
       </div>
   </div>
 
@@ -441,7 +441,7 @@ Experimental results demonstrate the effectiveness and robustness of our approac
       <div class="experience-info">
           <strong>Shantou University</strong><br>
           Sep 2022 - July 2026<br>
-          B.E Rank 1/79
+          B.E rank 1/79
       </div>
   </div>
 </div>
