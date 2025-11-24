@@ -56,7 +56,7 @@ redirect_from:
     box-sizing: border-box;
     margin-bottom: 20px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 120px; /* 移除之前固定的140px，改为更灵活的最小高度 */
+    min-height: 130px; /* 移除之前固定的140px，改为更灵活的最小高度 */
 }
 
 .publication-card:hover {
