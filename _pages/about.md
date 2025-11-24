@@ -116,6 +116,15 @@ redirect_from:
     .abstract-toggle:hover {
         text-decoration: underline;
     }
+
+      /* Add this rule to handle BibTeX content specifically */
+    .abstract-container #Bibtex-* .abstract-content,
+    .abstract-container [id^="Bibtex"] .abstract-content {
+        white-space: pre-wrap;        /* Preserves whitespace but allows wrapping */
+        word-wrap: break-word;        /* Breaks long words if needed */
+        overflow-wrap: break-word;    /* Alternative property name */
+        font-family: 'Courier New', Courier, monospace; /* Optional: monospace font for BibTeX */
+    }
 </style>
 <html> 
 <head>
