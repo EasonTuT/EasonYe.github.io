@@ -178,6 +178,7 @@ Publications
             <a href="" target="_blank">Zhiwen Yu</a>,<br>
             <a href="" target="_blank">Hau-San Wong</a>
         </div>
+        <div style="font-size: 13px;">IEEE Transactions on Circuits and Systems for Video Technology (<strong>IEEE TCSVT</strong>)</div>
         <div class="paper-links" style="font-size:13px;">
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract1')">[Abstract]</a>
             <a href="">[Paper]</a>
@@ -216,6 +217,7 @@ Extensive experiments on eight benchmark datasets demonstrate that our method co
             <a href="" target="_blank">Si Wu</a>,
             <a href="" target="_blank">Hau-San Wong</a>
         </div>
+        <div style="font-size: 13px;">The 40th Annual AAAI Conference on Artificial Intelligence(<strong>AAAI 2026</strong>)</div>
         <div class="paper-links" style="font-size:13px;">
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract1')">[Abstract]</a>
             <a href="">[Paper]</a>
