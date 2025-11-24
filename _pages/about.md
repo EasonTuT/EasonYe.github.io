@@ -116,15 +116,29 @@ redirect_from:
     .abstract-toggle:hover {
         text-decoration: underline;
     }
-
-      /* Add this rule to handle BibTeX content specifically */
-    .abstract-container #Bibtex-* .abstract-content,
-    .abstract-container [id^="Bibtex"] .abstract-content {
-        white-space: pre-wrap;        /* Preserves whitespace but allows wrapping */
-        word-wrap: break-word;        /* Breaks long words if needed */
-        overflow-wrap: break-word;    /* Alternative property name */
-        font-family: 'Courier New', Courier, monospace; /* Optional: monospace font for BibTeX */
+    
+    /* BibTeX section styles */
+    .bibtex-container {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 8px;
+        display: none;
+        font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+        font-size: 12px;
+        line-height: 1.5;
+        border: 1px solid #e0e0e0;
+        overflow-x: auto;
+        white-space: pre-wrap;
     }
+
+    .bibtex-content {
+        color: #333;
+        margin: 0;
+        padding: 0;
+        tab-size: 4;
+    }
+
 </style>
 <html> 
 <head>
@@ -203,9 +217,15 @@ After the optimization of the above mechanisms, our model smoothly performs sema
 Extensive experiments on eight benchmark datasets demonstrate that our method consistently outperforms existing approaches on the PVC problem.
             </div>
         </div>
-        <div id="Bibtex-4" class="abstract-container">
-            <div class="abstract-content">
-                None.
+        <div id="Bibtex-4" class="bibtex-container">
+            <div class="bibtex-content">
+                @article{peng2025smart,
+  title={SMART: Semantic Matching Contrastive Learning for Partially View-Aligned Clustering},
+  author={Peng, Liang and Ye, Yixuan and Liu, Cheng and Che, Hangjun and Wang, Fei and Yu, Zhiwen and Wong, Hau-San},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  year={2025},
+  publisher={IEEE}
+}
             </div>
         </div>
     </div>
@@ -241,9 +261,14 @@ Additionally, we develop a refinement module that integrates gene-correlation st
 Extensive experiments on several single‑cell RNA‑seq and spatial transcriptomics benchmark datasets demonstrate that our method consistently outperforms state-of-the-art baselines in cell-type identification accuracy. Moreover, downstream biological analyses confirm that the recovered cell populations exhibit coherent gene‑expression signatures, further validating the biological relevance of our approach.
             </div>
         </div>
-        <div id="Bibtex-3" class="abstract-container">
-            <div class="abstract-content">
-                None.
+        <div id="Bibtex-3" class="bibtex-container">
+            <div class="bibtex-content">
+                @inproceedings{peng2026refinement,
+  title={Refinement Contrastive Learning of Cell-Gene Associations for Unsupervised Cell Type Identification},
+  author={Peng, Liang and Liu, Haopeng and Ye, Yixuan and Liu, Cheng and Shen, Wenjun and Wu, Si and Wong, Hau-San},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2026}
+}
             </div>
         </div>
     </div>
@@ -275,23 +300,20 @@ Extensive experiments on several single‑cell RNA‑seq and spatial transcripto
             <div class="abstract-content">
                 Recently, neighbor-based contrastive learning has been introduced to effectively exploit neighborhood information for clustering. However, these methods rely on the homophily assumption—that connected nodes share similar class labels and should therefore be close in feature space—which fails to account for the varying homophily levels in real-world graphs.
 As a result, applying contrastive learning to low-homophily graphs may lead to indistinguishable node representations due to unreliable neighborhood information, making it challenging to identify trustworthy neighborhoods with varying homophily levels in graph clustering.
-To tackle this, we introduce a novel neighborhood Neutral Contrastive Graph Clustering method NeuCGC that extends traditional contrastive learning by incorporating neutral pairs—node pairs treated as weighted positive pairs, rather than strictly positive or negative. These neutral pairs are dynamically adjusted based on the graph’s homophily level, enabling a more flexible and robust learning process. 
+To tackle this, we introduce a novel neighborhood Neutral Contrastive Graph Clustering method NeuCGC that extends traditional contrastive learning by incorporating neutral pairs—node pairs treated as weighted positive pairs, rather than strictly positive or negative. These neutral pairs are dynamically adjusted based on the graph's homophily level, enabling a more flexible and robust learning process. 
 Leveraging neutral pairs in contrastive learning, our method incorporates two key components: 1) an adaptive contrastive neighborhood distribution alignment that adjusts based on the homophily level of the given attribute graph, ensuring effective alignment of neighborhood distributions, and 2) a contrastive neighborhood node feature consistency learning mechanism that leverages reliable neighborhood information from high-confidence graphs to learn robust node representations, mitigating the adverse effects of varying homophily levels and effectively exploiting highly trustworthy neighborhood information.
 Experimental results demonstrate the effectiveness and robustness of our approach, outperforming other state-of-the-art graph clustering methods.
             </div>
         </div>
-        <div id="Bibtex-2" class="abstract-container">
-            <div class="abstract-content">
-                @ARTICLE{11206540,
-                author={Peng, Liang and Ye, Yixuan and Liu, Cheng and Che, Hangjun and Leung, Man-Fai and Wu, Si and Wong, Hau-San},
-                journal={IEEE Transactions on Knowledge and Data Engineering}, 
-                title={Trustworthy Neighborhoods Mining: Homophily-Aware Neutral Contrastive Learning for Graph Clustering}, 
-                year={2025},
-                volume={},
-                number={},
-                pages={1-15},
-                keywords={Contrastive learning;Reliability;Computer science;Representation learning;Estimation;Silicon;Semantics;Robustness;Nickel;Learning systems;Contrastive Graph Clustering;Graph Homophily},
-                doi={10.1109/TKDE.2025.3622998}}
+        <div id="Bibtex-2" class="bibtex-container">
+            <div class="bibtex-content">
+                @article{peng2025trustworthy,
+  title={Trustworthy Neighborhoods Mining: Homophily-Aware Neutral Contrastive Learning for Graph Clustering},
+  author={Peng, Liang and Ye, Yixuan and Liu, Cheng and Che, Hangjun and Leung, Man-Fai and Wu, Si and Wong, Hau-San},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  year={2025},
+  publisher={IEEE}
+}
             </div>
         </div>
     </div>
@@ -324,18 +346,15 @@ Experimental results demonstrate the effectiveness and robustness of our approac
                 Multi-view clustering (MVC) has shown that leveraging both consistency and complementary information across views enhances clustering performance. However, most existing methods focus on aligning features into the same dimension, often neglecting cross-view heterogeneity and introducing discrepancies. To address this, we propose a novel multi-view clustering framework that combines cross-view neighborhood contrastive learning with a cross-attention view-mixup feature learning mechanism. Specifically, the cross-attention view-mixup module learns view-invariant feature representations by capturing complementary and consistent information, while the neighborhood contrastive learning module uncovers semantic structures across views based on the learned mixup features. By implicitly performing feature mixup across views and effectively integrating cross-view neighborhood contrastive learning, our method alleviates cross-view discrepancies and enables more effective integration of complementary and consistent information, ultimately enhancing clustering performance. Experiments conducted on several real datasets demonstrate the effectiveness of our proposed method in comparision with several representative MVC approaches.
             </div>
         </div>
-        <div id="Bibtex-1" class="abstract-container">
-            <div class="abstract-content">
-                @INPROCEEDINGS{11209498,
+        <div id="Bibtex-1" class="bibtex-container">
+            <div class="bibtex-content">
+                @inproceedings{ye2025cross,
+  title={Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning},
   author={Ye, Yixuan and Zhang, Yang and Peng, Liang and Li, Rui and Liu, Cheng and Wu, Si and Wong, Hau-San},
-  booktitle={2025 IEEE International Conference on Multimedia and Expo (ICME)}, 
-  title={Cross-View Neighborhood Contrastive Multi-View Clustering with View Mixup Feature Learning}, 
+  booktitle={2025 IEEE International Conference on Multimedia and Expo (ICME)},
   year={2025},
-  volume={},
-  number={},
-  pages={1-6},
-  keywords={Representation learning;Semantics;Contrastive learning;Benchmark testing;Multi-view clustering;Cross-view contrastive learning;Cross-attention},
-  doi={10.1109/ICME59968.2025.11209498}}
+  organization={IEEE}
+}
             </div>
         </div>
     </div>
@@ -379,6 +398,13 @@ function toggleAbstract(event, abstractId) {
     const toggleLink = event.target;
     
     if (abstractContainer.style.display === 'none' || abstractContainer.style.display === '') {
+        // 为BibTeX容器应用特殊样式
+        if (abstractId.startsWith('Bibtex-')) {
+            abstractContainer.style.fontFamily = "'Courier New', monospace";
+            abstractContainer.style.backgroundColor = "#f8f9fa";
+            abstractContainer.style.border = "1px solid #e0e0e0";
+            abstractContainer.style.padding = "15px";
+        }
         abstractContainer.style.display = 'block';
     } else {
         abstractContainer.style.display = 'none';
