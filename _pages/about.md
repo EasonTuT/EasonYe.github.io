@@ -130,7 +130,7 @@ redirect_from:
     /* 继承抽象部分的字体样式 */
     font-size: 13px;
     line-height: 1.5;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Arial Rounded MT Bold', 'Verdana', sans-serif;
 
     /* 保留你希望的换行行为 */
     white-space: pre-wrap;
