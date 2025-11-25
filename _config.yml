@@ -8,12 +8,12 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Yixuan Ye / Personal Homepage"
+title                    : 
 title_separator          : "-"
 name                     : Yixuan Ye
 description              : &description "personal description"
 # url                      : https://selen-suyue.github.io
-url                      : https://easontut.github.io/EasonYe.github.io/
+url                      : https://EasonYe.github.io/
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 # repository               : "Selen-Suyue/Selen"
 repository               : "EasonTuT/EasonYe"
