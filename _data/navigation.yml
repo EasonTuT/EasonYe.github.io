@@ -24,4 +24,4 @@
     url: "#experience"     # 指向 id="experience" 的元素
 
   - title: "Contact"
-    url: "#contact"
+    url: "#Contact"
