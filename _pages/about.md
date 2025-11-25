@@ -451,6 +451,14 @@ Experimental results demonstrate the effectiveness and robustness of our approac
   </div>
 </div>
 
+<h2 id="Contact">Contact Me</h2>
+<p>I truly believe that great ideas and improvements come from open discussions and debates in academia. If you have any thoughts, disagreements with my work, or fresh ideas you’d like to share, I’d be really grateful to hear from you. I am incredibly fortunate to have met many friends who have helped me along the way, and in turn, I am always willing to chat and offer any assistance I can to others.</p>
+
+<p>If you’ve got any questions about my research or if you’ve tried reaching out through GitHub issues and haven’t heard back, please don’t hesitate to drop me an email.</p>
+
+<p>Please note that I am only interested in discussing intriguing problems and insights, not metrics. If you are inclined to discuss publication or citation numbers, rely on numerical indicators to quantify individuals, or compare me to others, please refrain from contacting me.</p>
+
+<p>My preferred email: <span style="color: #c71585;">yixuanye12@gmail.com</span></p>
 <!-- Lightbox Overlay -->
 <div id="lightbox-overlay" onclick="closeLightbox()">
     <img id="lightbox-image" src="" alt="Enlarged view">
