@@ -226,10 +226,15 @@ redirect_from:
 <body>
 <h1 id="introduction" class="main-heading">Hi there <img src="images/Hi.gif" width="40px"> Welcome to my Homepage!</h1>
 
-<p>I am an undergraduate (2022-2026) at Shantou University, focusing on World Model and Multi-modal.</p>
 
-<p>I work at <a href="https://csu-jpg.github.io">JPG@CSU</a> with <a href="https://fingerrec.github.io">Prof. Alex Jinpeng Wang</a>.<br>
-Previously I worked at Shantou University with <a href="https://cliu272.github.io">Prof. Cheng Liu</a>.</p>
+<h2 >About Me</h2>
+<p>I am a <strong>fourth-year</strong> undergraduate student at Shantou University. I will join the <a href="https://csu-jpg.github.io">JPG Lab</a> at Central South University, where I will pursue my master’s degree under the supervision of <a href="https://fingerrec.github.io">Prof. Alex Jinpeng Wang</a>, focusing on <strong>World Model</strong> and <strong>Robotic Learning</strong>.  
+During my undergraduate studies, I was fortunate to collaborate closely with <a href="https://cliu272.github.io">Prof. Cheng Liu</a> on research in Multimodal Learning and AI4S.</p>
+
+<p>🎯 I am currently developing world models and investigating their fundamental importance. Additionally, I am exploring their applications in robotic learning and autonomous driving.</p>
+
+
+<p>🤝 I am eager to discuss potential collaborations and am actively seeking industry internship opportunities in World Model. Please feel free to contact me via email if you are interested.</p>
 
 <h2 id="news">News</h2>
 <ul>
