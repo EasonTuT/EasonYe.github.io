@@ -203,11 +203,18 @@
   }
 
   .visible-links {
-    display: table;
+    // 移除原来的 display: table; 和 li 的 display: table-cell;
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 在主轴（水平）上居中对齐 */
+    align-items: center; /* 在交叉轴（垂直）上居中对齐（如果需要） */
+    width: 100%; /* 确保容器占满可用宽度以进行居中 */
+    // margin: 0 auto; /* 如果 justify-content: center 未生效，可尝试取消注释此行 */
 
     li {
-      display: table-cell;
-      vertical-align: middle;
+      // 移除原来的 display: table-cell; vertical-align: middle;
+      display: list-item; /* 恢复列表项默认显示 */
+      text-align: center; /* 确保链接文本居中（可选，因为 flex 容器已居中） */
+      flex: 1; /* 让每个列表项平分容器宽度（可选，取决于你想要的链接间距） */
 
       &:first-child {
         font-weight: bold;
@@ -227,7 +234,7 @@
 
     a {
       position: relative;
-
+         
       &:before {
         content: "";
         position: absolute;
@@ -248,6 +255,9 @@
             -ms-transform: scaleX(1);
                 transform: scaleX(1); /* reveal*/
       }
+      margin: 0 0.5rem; /* 添加左右边距以分隔链接，根据需要调整 */
+      text-align: center; /* 确保链接文本居中 */
+      flex: 1; /* 让链接也平分其父元素（li）的宽度（如果设置了 li flex: 1） */
     }
   }
 
