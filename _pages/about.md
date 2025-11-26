@@ -321,7 +321,16 @@ Extensive experiments on several single‑cell RNA‑seq and spatial transcripto
         </div>
         <div id="Bibtex-3" class="abstract-container">
             <div class="abstract-content">
-                None.
+                @ARTICLE{11268507,
+                author={Peng, Liang and Ye, Yixuan and Liu, Cheng and Che, Hangjun and Wang, Fei and Yu, Zhiwen and Wu, Si and Wong, Hau-San},
+                journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+                title={SMART: Semantic Matching Contrastive Learning for Partially View-Aligned Clustering}, 
+                year={2025},
+                volume={},
+                number={},
+                pages={1-1},
+                keywords={Muti-View Clustering;Partially View-Aligned Clustering;Contrastive Learning},
+                doi={10.1109/TCSVT.2025.3636507}}
             </div>
         </div>
     </div>
