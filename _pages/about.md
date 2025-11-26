@@ -266,7 +266,7 @@ During my undergraduate studies, I was fortunate to collaborate closely with <a 
         <div style="font-size: 13px;">IEEE Transactions on Circuits and Systems for Video Technology (<strong>IEEE TCSVT</strong>)</div>
         <div class="paper-links" style="font-size:13px;">
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'abstract-4')">[Abstract]</a>
-            <a href="#">[Paper]</a>
+            <a href="https://ieeexplore.ieee.org/document/11268507">[Paper]</a>
             <a href="#" class="abstract-toggle" onclick="toggleAbstract(event, 'Bibtex-4')">[BibTex]</a>
             <a href="https://github.com/THPengL/SMART">[Code]</a>
         </div>
